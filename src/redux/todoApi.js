@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 
 export const Todo = createApi({
     reducerPath: "TodoData",
-    baseQuery: fetchBaseQuery({ baseUrl: "https://todo-project-back-9kz3.onrender.com/user/",credentials:"include" }),
+    baseQuery: fetchBaseQuery({ baseUrl: `${import.meta.env.VITE_API_URL}/user/`,credentials:"include" }),
     tagTypes: ["todo"],
     endpoints: (builder) => {
         return {
